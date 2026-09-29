@@ -1,3 +1,4 @@
+#include "uart.h"
 #include "minemu/boot.h"
 #include "minemu/trap.h"
 #include "minemu/trace.h"
@@ -14,6 +15,6 @@ void minemu_kernel_main(const struct minemu_boot_info *boot_info) {
         minemu_trace_event(UINT32_C(0xb007bad0));
         minemu_fail_stop();
     }
-    minemu_trace_event(1);
+    uart_puts("hello world\n");
     minemu_fail_stop();
 }
