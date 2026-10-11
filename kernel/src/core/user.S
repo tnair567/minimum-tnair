@@ -1,3 +1,4 @@
+@ Adapted from minimum-template examples/user-mode-hello (course-provided example)
 .syntax unified
 .cpu cortex-a9
 .arm

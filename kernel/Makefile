@@ -20,7 +20,7 @@ DEPENDENCIES := $(OBJECTS:.o=.d)
 
 ARCH_FLAGS := -mcpu=cortex-a9 -marm -mfloat-abi=soft
 CPPFLAGS := -Iinclude
-CFLAGS := $(ARCH_FLAGS) \
+CFLAGS := $(ARCH_FLAGS) -O2 -fno-tree-loop-distribute-patterns \
 	-ffreestanding \
 	-fno-builtin \
 	-fdata-sections \

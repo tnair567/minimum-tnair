@@ -1,3 +1,4 @@
+/* Loader and user-mode entry adapted from minimum-template examples/user-mode-hello (course-provided example). ioctl dispatcher written with LLM assistance (see metadata.txt). */
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -14,8 +15,8 @@
 #define USER_IMAGE_BASE UINT32_C(0x00400000)
 #define USER_STACK_BOTTOM UINT32_C(0x007ff000)
 #define USER_STACK_TOP UINT32_C(0x00800000)
-#define MAX_USER_IMAGE_PAGES 16U
-#define SYSTEM_ROM_TABLE_COUNT 4U
+#define MAX_USER_IMAGE_PAGES 4U
+#define SYSTEM_ROM_TABLE_COUNT 1U
 #define CPSR_MODE_MASK UINT32_C(0x1f)
 #define CPSR_MODE_USR UINT32_C(0x10)
 #define CPSR_THUMB UINT32_C(0x20)
