@@ -8,5 +8,4 @@ void uart_puts(const char *s);
 int  uart_getc(void);          /* non-blocking: -1 if nothing buffered */
 void uart_irq_handler(void);   /* called by the IRQ dispatcher */
 void kprintf(const char *fmt, ...);  /* supports %s %c %d %u %x %% */
-void msh_run(void);
 #endif
